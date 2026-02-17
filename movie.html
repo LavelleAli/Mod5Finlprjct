@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="movie.js"></script>
-    <script src="index.css"></script>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./movie.css">
     <title>Document</title>
 </head>
 <body>
-    
+   <div class="movie__search">
+    <a href="index.html">
+        <button>Back</button>
+    </a>
+    <div class="movie__search--container">
+        <label for="" class="movie__search--label">
+            Search by Id
+        </label>
+        <input type="text" placeholder="search for movie" onchange="(event)">
+    </div>
+   </div>
+   <div class="movie__list">
+    <div class="movie">
+        <div class="movie__title">
+            Movie Title
+        </div>
+        <p class="movie__body">
+            Movie Body
+        </p>
+    </div>
+   </div>
 </body>
+<script src="movie.js"></script>
 </html>

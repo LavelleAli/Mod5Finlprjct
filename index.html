@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    
     <script
       src="https://kit.fontawesome.com/966c33780b.js"
       crossorigin="anonymous"
@@ -27,9 +27,10 @@
               </li>
 
               <li class="nav__item">
-                <form class="search__bar">
-                  <input class="nav__link" type="search" placeholder="search">
-                </form>
+                <div class="search__wrapper">
+                  <label for="movieSearch">Search Movie: </label>
+                  <input type="search" id="movieSearch" placeholder="search for movies" onchange="onSearchChange(event)">
+                </div>
               </li>
             </ul>
           </div>
@@ -41,19 +42,49 @@
     <div class="container">
       <div class="row">
         <div class="movie__list">
+          <h1 class="movie__header">
+            Movies
+          </h1>
           <div class="movies">
             <div class="movie__card">
               <div class="movie__card--container">
-                <p><b>Poster:</b> xxxx</p>
-                <p><b>Title:</b> xxxx</p>
-                <p><b>Type:</b> xxxx</p>
-                <p><b>Year:</b> xxxx</p>
-                <p><b>imdbId:</b> xxxx</p>
+                <p class="movie__card--item">
+                  <b>Poster:</b>
+                  <a href="#"></a>
+                </p>
+                <p class="movie__card--item">
+                  <b>Title:</b>
+                </p>
+                <p class="movie__card--item">
+                  <b>Type:</b>
+                </p>
+                <p class="movie__card--item">
+                  <b>Year:</b>
+                </p>
+                <p class="movie__card--item">
+                  <b>imdbId:</b>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Section: Movie Search -->
+      <div class="movie__menu">
+        <div class="movie">
+            <div class="movie__title">
+                Movie Title
+            </div>
+            <p class="movie__body">
+                Movie Body
+            </p>
+        </div>
+      </div>
+
+
+    <script src="script.js"></script>
+    <!-- <script src="movie.js"></script> -->
   </body>
 </html>
