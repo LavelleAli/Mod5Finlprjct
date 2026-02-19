@@ -5,31 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    
     <script
       src="https://kit.fontawesome.com/966c33780b.js"
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body style="background-image: url('./Assets/starlit_background.gif');">
     <!--Section: Navigation -->
       <div class="container">
         <div class="row">
           <div class="nav__box">
             <ul class="nav__list">
-
               <li class="nav__item">
-                <a class="nav__link" href="#">Sign In</a> <!--bring up sign in page of display box--> 
+                <a class="nav__link home__link" href="index.html">
+                  <span class="colored__words--white">Home</span>
+                </a>
               </li>
-
               <li class="nav__item">
-                <a class="nav__link" href="#main">See a Movie</a> <!--bring to movies section-->
+                <a class="nav__link brow__link" href="#main"><span class="colored__words--white">Browse Movies</span></a> <!--bring to movies section-->
               </li>
-
               <li class="nav__item">
-                <div class="search__wrapper">
-                  <label for="movieSearch">Search Movie: </label>
-                  <input type="search" id="movieSearch" placeholder="search for movies" onchange="onSearchChange(event)">
+                <div class="search__wrapper nav__link">
+                  <label for="movieSearch"><span class="colored__words--white">Search Movies:</span></label>
+                  <input class="search__movie--input" type="text" id="movieSearch" placeholder=" search for movies" onchange="onSearchChange(event)">
                 </div>
               </li>
             </ul>
@@ -38,30 +36,30 @@
       </div>
     </section>
 
-    <!-- Section: Main -->
+    <!-- Section: Main -->  
     <div class="container">
       <div class="row">
         <div class="movie__list">
           <h1 class="movie__header">
-            Movies
+           <span class="colored__words--white">Featured Movies</span>
           </h1>
           <div class="movies">
             <div class="movie__card">
               <div class="movie__card--container">
-                <p class="movie__card--item">
+                <p class="movie__card--item movie__card--poster">
                   <b>Poster:</b>
                   <a href="#"></a>
                 </p>
-                <p class="movie__card--item">
+                <p class="movie__card--item movie__card--poster">
                   <b>Title:</b>
                 </p>
-                <p class="movie__card--item">
-                  <b>Type:</b>
-                </p>
-                <p class="movie__card--item">
-                  <b>Year:</b>
-                </p>
-                <p class="movie__card--item">
+                <p class="movie__card--item movie__card--poster">
+                  <b>Type:</b> 
+                </p> 
+                <p class="movie__card--item movie__card--poster">
+                  <b>Year:</b> 
+                </p> 
+                <p class="movie__card--item movie__card--poster">
                   <b>imdbId:</b>
                 </p>
               </div>
@@ -71,20 +69,16 @@
       </div>
     </div>
 
-    <!-- Section: Movie Search -->
-      <div class="movie__menu">
-        <div class="movie">
-            <div class="movie__title">
-                Movie Title
-            </div>
-            <p class="movie__body">
-                Movie Body
-            </p>
-        </div>
-      </div>
+<!-- Section: Footer -->
+ <footer>
+  <div class="footer__links">
+    © Lavelle Ali 2026
+  </div>
+ </footer>
 
 
     <script src="script.js"></script>
-    <!-- <script src="movie.js"></script> -->
+    <script src="movie.js"></script>
+    <!-- <div class="starlight01"></div> -->
   </body>
 </html>

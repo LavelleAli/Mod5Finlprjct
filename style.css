@@ -10,7 +10,7 @@
 html {
   scroll-behavior: smooth;
   padding: 0 20px;
-  background-color: rgb(20, 33, 218);
+  background-color: rgb(9, 9, 9);
 }
 
 .container {
@@ -28,6 +28,11 @@ html {
   color: rgb(241, 191, 43);
 }
 
+.colored__words--white {
+  color: rgb(255, 255, 255);
+  filter: drop-shadow(0px 0px 7px #ffe604);
+}
+
 /*
 
 Section: Nav 
@@ -38,10 +43,12 @@ Section: Nav
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  border: 3px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 24px;
   padding: 20px;
   display: flex;
   justify-content: center;
+  font-size: 12px;
 }
 
 .nav__list {
@@ -57,15 +64,48 @@ Section: Nav
   font-weight: 700;
   text-decoration: none;
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(238, 237, 237);
+  transition: all 300ms ease;
 }
 
+.nav__link:hover{
+  color: red;
+  font-size: 24px;
+  transition: all 300ms ease;
+  
+}
+
+
+
+.brow__link:hover{
+  cursor: not-allowed;
+}
+
+.search__wrapper{
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search__movie--input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
 
 /*
 
  Section: Movies 
  
  */
+
+ .movie__header {
+  color: white;
+ }
+
 
 .movies {
   width: 100%;
@@ -94,21 +134,56 @@ Section: Nav
 .movie__card {
   /* border: 1px solid red; */
   margin: 12px 8px;
+  color: white;
 }
-
 
 .movie__card--container {
-  
+  margin-bottom: 32px;
+  transition: all 300ms ease-in-out;
 }
+
+.movie__card--container:hover {
+transform: scale(1.05);
+transition: all 300ms ease-in-out;
+cursor: not-allowed;
+}
+
+
 
 .movie__card--item {
-  ;
+
+}
+
+
+/* 
+
+Section: Footer
+
+
+*/
+
+.footer__links {
+  width: 100%;
+  max-width: 1400px;
+  color: white;
+
 }
 
 
 
-/*
- 
-Section: Movie Search
+/* 
+
+Shapes Styles
 
 */
+
+.starlight01 {
+  background-image: url('./Assets/starlit_background.gif');
+  background-size: cover;
+  background-repeat:no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+

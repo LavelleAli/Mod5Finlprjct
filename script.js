@@ -5,34 +5,7 @@
 
 
 const movieListEl = document.querySelector('.movies');
-const movieMenuEl = document.querySelector('.movie__menu')
 
-// This is a function for the search bar
-async function onSearchChange(event) {
-    const movieID = event.target.value
-    // console.log(I want the const "movieID" to bring up the movie that is searched for in the search bar)
-    
-    const movie = localStorage.getItem('movieID')
-    const movieItem = await fetch(`http://www.omdbapi.com/?apikey=e8773e4&s=${movieID}`)
-    const movieItemData = await movieItem.json();
-  
-    movieMenuEl.innerHTML = movieItemData.Search.map((search) => movieSearch(search)).join("");
-}
-
-
-function movieSearch(search) {
-    return `
-    <div class="movie__list">
-        <div class="movie">
-            <div class="movie__title">
-                ${search.Poster}
-            </div>
-            <p class="movie__body">
-                ${search.Title}
-            </p>
-        </div>
-    </div>`
-}
 
 
 // This function translates the API to HTML and puts it on the page
@@ -47,8 +20,8 @@ getAPI();
 
 // This function operates within the MovieInfo function for the onclick and targets a new page.
 function showMovie(imdbID) {
-    localStorage.setItem("movieID", imdbID)
-    // window.location.href = `${window.location.origin}/movie.html`
+    localStorage.setItem("movieTag", imdbID)
+    window.location.href = `${window.location.origin}/movie.html`
     
 }
 
@@ -57,13 +30,25 @@ function movieInfo(movie) {
     return `
         <div class="movie__card" onclick="showMovie('${movie.imdbID}')">
             <div class="movie__card--container">
-                <p><img src="${movie.Poster}"></p>
-                <p>${movie.Title}</p>
-                <p>${movie.Year}</p>
+                <p class=" movie__card--poster"><img src="${movie.Poster}"></p>
+                <p><b>${movie.Title}</b></p>
+                <p><b>${movie.Year}</b></p>
             </div>
-        </div>`;
+        </div>`
+        
     }
 
-    
-    
-    
+
+
+// Moving Background
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape")
+    const x = event.clientX * scaleFactor;
+    const y = event.clientY * scaleFactor;
+
+    for (let i = 0; i < shapes.length; ++i ) {
+        const isOdd = i % 2 !== 0;
+        const boolInt = isOdd ? -1 : 1;
+        shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+    }
+}

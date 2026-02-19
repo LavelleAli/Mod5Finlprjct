@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-    <link rel="stylesheet" href="./movie.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./movie.css"> -->
+    <title>Movies HTML</title>
 </head>
-<body>
-   <div class="movie__search">
-    <a href="index.html">
-        <button>Back</button>
-    </a>
-    <div class="movie__search--container">
-        <label for="" class="movie__search--label">
-            Search by Id
-        </label>
-        <input type="text" placeholder="search for movie" onchange="(event)">
-    </div>
-   </div>
-   <div class="movie__list">
-    <div class="movie">
-        <div class="movie__title">
-            Movie Title
+<body style="background-image: url('./Assets/starlit_background.gif');">
+    
+    <a href="index.html">Back</a>
+   </button>
+
+   <!--Section: Navigation -->
+      <div class="container">
+        <div class="row">
+          <div class="nav__box">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link home__link" href="index.html">
+                  <span class="colored__words--white">Home</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link brow__link" href="#main"><span class="colored__words--white">Browse Movies</span></a> <!--bring to movies section-->
+              </li>
+              <li class="nav__item">
+                <div class="search__wrapper nav__link">
+                  <label for="movieSearch"><span class="colored__words--white">Search Movies:</span></label>
+                  <input class="search__movie--input" type="text" id="movieSearch" placeholder=" search for movies" onchange="onSearchChange(event)">
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p class="movie__body">
-            Movie Body
-        </p>
-    </div>
-   </div>
+      </div>
+    </section>
 </body>
 <script src="movie.js"></script>
 </html>
