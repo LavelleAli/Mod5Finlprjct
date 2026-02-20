@@ -41,7 +41,7 @@
 //     `).join('');
 // }
 
-console.log(localStorage.getItem("movieTag"))
+
 const movieMenuEl = document.querySelector('.movies')
 
 // This is a function for the search bar

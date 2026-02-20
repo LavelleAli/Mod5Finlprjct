@@ -21,7 +21,7 @@ getAPI();
 // This function operates within the MovieInfo function for the onclick and targets a new page.
 function showMovie(imdbID) {
     localStorage.setItem("movieTag", imdbID)
-    window.location.href = `${window.location.origin}/movie.html`
+    // window.location.href = `${window.location.origin}/movie.html`
     
 }
 
@@ -30,9 +30,9 @@ function movieInfo(movie) {
     return `
         <div class="movie__card" onclick="showMovie('${movie.imdbID}')">
             <div class="movie__card--container">
-                <p class=" movie__card--poster"><img src="${movie.Poster}"></p>
-                <p><b>${movie.Title}</b></p>
-                <p><b>${movie.Year}</b></p>
+                <p class="movie__card--poster"><img src="${movie.Poster}"></p>
+                <p class="movie__details"><b>${movie.Title}</b></p>
+                <p class="movie__details"><b>${movie.Year}</b></p>
             </div>
         </div>`
         

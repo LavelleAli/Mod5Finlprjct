@@ -7,29 +7,44 @@
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/966c33780b.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous">
+    </script>
   </head>
-  <body style="background-image: url('./Assets/starlit_background.gif');">
+
+  <body class="background__img" style="background-image: url('./Assets/starlit_background.gif');">
+    
     <!--Section: Navigation -->
+    <section id="nav">
       <div class="container">
         <div class="row">
           <div class="nav__box">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link home__link" href="index.html">
-                  <span class="colored__words--white">Home</span>
+                <a class="nav__link home__link" href="index.html"> 
+                  <button class="home__btn nav__link">
+                    <span class="colored__words--white">
+                    <i class="fa-solid fa-house fa-bounce" style="color: rgb(255, 231, 145);"></i>
+                    Home
+                    </span>
+                  </button>
                 </a>
               </li>
               <li class="nav__item">
-                <a class="nav__link brow__link" href="#main"><span class="colored__words--white">Browse Movies</span></a> <!--bring to movies section-->
+                <a class="nav__link brow__link home__btn" href="#main">
+                  <i class="fa-solid fa-eye fa-bounce" style="color: rgb(255, 231, 145);"></i>
+                  <span class="colored__words--white">
+                    Browse Movies
+                  </span>
+                </a> <!--bring to movies section-->
               </li>
               <li class="nav__item">
-                <div class="search__wrapper nav__link">
+                <div class="search__wrapper nav__link home__btn">
+                  <i class="fa-notdog fa-solid fa-magnifying-glass fa-bounce" style="color: rgb(255, 231, 145);"></i>
                   <label for="movieSearch"><span class="colored__words--white">Search Movies:</span></label>
-                  <input class="search__movie--input" type="text" id="movieSearch" placeholder=" search for movies" onchange="onSearchChange(event)">
+                  <input class="search__movie--input" type="text" id="movieSearch" placeholder=" search for movies"  onchange="onSearchChange(event)">     
                 </div>
               </li>
+              
             </ul>
           </div>
         </div>
@@ -37,42 +52,55 @@
     </section>
 
     <!-- Section: Main -->  
-    <div class="container">
-      <div class="row">
-        <div class="movie__list">
-          <h1 class="movie__header">
-           <span class="colored__words--white">Featured Movies</span>
-          </h1>
-          <div class="movies">
-            <div class="movie__card">
-              <div class="movie__card--container">
-                <p class="movie__card--item movie__card--poster">
-                  <b>Poster:</b>
-                  <a href="#"></a>
-                </p>
-                <p class="movie__card--item movie__card--poster">
-                  <b>Title:</b>
-                </p>
-                <p class="movie__card--item movie__card--poster">
-                  <b>Type:</b> 
-                </p> 
-                <p class="movie__card--item movie__card--poster">
-                  <b>Year:</b> 
-                </p> 
-                <p class="movie__card--item movie__card--poster">
-                  <b>imdbId:</b>
-                </p>
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="movie__list">
+            <h1 class="movie__header">
+            <span class="colored__words--white">Featured Movies</span>
+            </h1>
+            <div class="movies">
+              <div class="movie__card">
+                <div class="movie__card--container">
+                  <p class="movie__card--item movie__card--poster">
+                    <b>Poster:</b>
+                    <a href="#"></a>
+                  </p>
+                  <p class="movie__card--item movie__card--poster">
+                    <b>Title:</b>
+                  </p>
+                  <p class="movie__card--item movie__card--poster">
+                    <b>Type:</b> 
+                  </p> 
+                  <p class="movie__card--item movie__card--poster">
+                    <b>Year:</b> 
+                  </p> 
+                  <p class="movie__card--item movie__card--poster">
+                    <b>imdbId:</b>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
 <!-- Section: Footer -->
  <footer>
-  <div class="footer__links">
-    © Lavelle Ali 2026
+  <div class="container">
+    <div class="row">
+      <div class="footer__media">
+        © Lavelle Ali 2026
+        <div class="footer__links">
+          <a href="#nav">
+            <i class="fa-notdog fa-solid fa-arrow-up fa-bounce" style="color: rgb(255, 231, 145);"></i>
+          </a>
+          
+        </div>
+      </div>
+
+    </div>
   </div>
  </footer>
 
