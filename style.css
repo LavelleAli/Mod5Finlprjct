@@ -33,6 +33,10 @@ html {
   filter: drop-shadow(0px 0px 7px #ffe604);
 }
 
+.background__img {
+  background-image: url('./Assets/starlit_background.gif')
+}
+
 /*
 
 Section: Nav 
@@ -195,10 +199,13 @@ Section: Footer
 .footer__media {
   width: 100%;
   max-width: 1400px;
+  margin: 0 auto;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
+
 }
 
 .footer__links {
