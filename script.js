@@ -15,6 +15,19 @@ async function getAPI() {
 }
 getAPI();
 
+// This is a function for the search bar
+async function onSearchChange(event) {
+    const movieID = event.target.value
+    
+    const movie = localStorage.getItem('movieTag')
+    const movieItem = await fetch(`http://www.omdbapi.com/?apikey=e8773e4&s=${movieID}`)
+    const movieItemData = await movieItem.json();
+  
+    movieListEl.innerHTML = movieItemData.Search.map((movie) => movieInfo(movie)).join("")
+}
+
+
+
 
 
 // This function operates within the MovieInfo function for the onclick and targets a new page.
@@ -23,6 +36,9 @@ function showMovie(imdbID) {
     // window.location.href = `${window.location.origin}/movie.html`
     
 }
+
+
+
 
 function movieInfo(movie) {
     return `
