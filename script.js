@@ -40,8 +40,8 @@ function movieInfo(movie) {
     <div class="movie__card" onclick="showMovie('${movie.imdbID}')">
     <div class="movie__card--container">
     <p class="movie__card--poster"><img src="${movie.Poster}"></p>
-    <p class="movie__details"><b>${movie.Title}</b></p>
-    <p class="movie__details"><b>${movie.Year}</b></p>
+    <p><b>${movie.Title}</b></p>
+    <p><b>${movie.Year}</b></p>
     </div>
     </div>`
 }

@@ -168,6 +168,10 @@ Section: Nav
 .movie__card--container {
   margin-bottom: 32px;
   transition: all 300ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .movie__card--container:hover {
@@ -176,14 +180,15 @@ Section: Nav
   cursor: not-allowed;
 }
 
-.movie__card--item {
+/* .movie__card--item {
   
 }
 
 .movie__details {
   display: flex;
   justify-content: center;
-}
+} */
+
 /* 
 
 Section: Footer
