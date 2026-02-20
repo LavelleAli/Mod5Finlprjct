@@ -28,17 +28,12 @@ async function onSearchChange(event) {
 
 
 
-
-
 // This function operates within the MovieInfo function for the onclick and targets a new page.
 function showMovie(imdbID) {
     localStorage.setItem("movieTag", imdbID)
     // window.location.href = `${window.location.origin}/movie.html`
     
 }
-
-
-
 
 function movieInfo(movie) {
     return `
@@ -49,5 +44,4 @@ function movieInfo(movie) {
     <p class="movie__details"><b>${movie.Year}</b></p>
     </div>
     </div>`
-    
 }
