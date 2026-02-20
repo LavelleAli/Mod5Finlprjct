@@ -151,10 +151,6 @@ Section: Nav
   justify-content: center;
   justify-content: space-between;
   align-items: center;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15rem;
-  margin-top: 8rem; */
 }
 
 .movie__header {
@@ -165,7 +161,6 @@ Section: Nav
 }
 
 .movie__card {
-  /* border: 1px solid red; */
   margin: 12px 8px;
   color: white;
 }
